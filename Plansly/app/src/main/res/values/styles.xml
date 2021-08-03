@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorControlActivated">#6EB1FF</item>
+        <item name="colorControlHighlight">#6EB1FF</item>
+        <item name="android:colorPrimaryDark">#1f44ff</item>
+    </style>
+    <style name="AppBackgroundColor" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Customize your theme here. -->
+        <item name="android:background">@color/activityBackGroundColor</item>
+    </style>
+
+    <style name="TaskTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorControlActivated">#6EB1FF</item>
+        <item name="colorControlHighlight">#6EB1FF</item>
+        <item name="android:colorPrimaryDark">#1f44ff</item>
+    </style>
+
+    <style name="EventTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorControlActivated">#6EB1FF</item>
+        <item name="colorControlHighlight">#6EB1FF</item>
+        <item name="android:colorPrimaryDark">#1f44ff</item>
+
+    </style>
+
+    <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:textColorPrimary">@color/plannerTextColor</item>
+    </style>
+
+    <style name="customFab">
+        <item name="android:background">@drawable/action_button_label_bg</item>
+        <item name="android:textColor">@color/toolBarColor</item>
+    </style>
+
+</resources>

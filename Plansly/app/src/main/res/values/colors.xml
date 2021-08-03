@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="toolBarTextColor">#FFFFFF</color>
+    <color name="toolBarColor">#196bf9</color>
+    <color name="activityBackGroundColor">#FAFCFF</color>
+    <color name="navTextColor">#9E9696</color>
+    <color name="plannerTextColor">#6EB1FF</color>
+
+    <color name="label_pressed">#196bf9</color>
+</resources>

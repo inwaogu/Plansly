@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackGroundColor"
+    tools:context=".Event">
+
+    <!--Divider Line-->
+    <!--Todo:adjust margin or padding of spinner icon so its not so close to border-->
+    <!--Todo:add back button-->
+    <!--<Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginBottom="530dp"
+        android:background="@drawable/ic_spinner_dropdown"
+        android:paddingStart="0dp"
+        android:spinnerMode="dropdown"/>-->
+
+    <EditText
+        android:id="@+id/eventGoal"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="18dp"
+        android:ems="10"
+        android:hint="What to do?"
+        android:inputType="textPersonName"
+        android:theme="@style/AppTheme"/>
+    <TextView
+        android:id="@+id/titleLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/eventGoal"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="65dp"
+        android:fontFamily="@font/opensans"
+        android:text="Title"
+        android:textColor="#4162FF" />
+    <!--Todo:Replace editText with label and underline -->
+    <TextView
+        android:id="@+id/dateLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleLable"
+        android:layout_alignLeft="@id/date"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="-69dp"
+        android:fontFamily="@font/opensans"
+        android:text="Date"
+        android:textColor="#4162FF" />
+
+    <!--Todo:Replace editText with label and underline-->
+    <!--Fix srcCompat error-->
+
+    <EditText
+        android:id="@+id/eventNote"
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bottomDateDivider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:hint="Type a note"
+        android:inputType="textPersonName" />
+
+
+
+    <ImageView
+        android:id="@+id/noteLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateLable"
+        android:layout_alignLeft="@id/note"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="196dp"
+        app:srcCompat="@drawable/ic_event_note" />
+
+    <RelativeLayout
+        android:id="@+id/eventItemsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eventNote"
+        android:layout_marginTop="31dp">
+
+        <ImageView
+            android:id="@+id/locationLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/location"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="12dp"
+            app:srcCompat="@drawable/ic_location" />
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="18dp"
+            android:ems="10"
+            android:hint="Location"
+            android:textSize="18sp"
+            android:inputType="textPostalAddress"/>
+
+
+        <ImageView
+            android:id="@+id/remindMeLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/remindMe"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="76dp"
+            app:srcCompat="@drawable/ic_alert" />
+
+        <TextView
+            android:id="@+id/remindMe"
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="18dp"
+            android:ems="10"
+            android:hint="Remind me"
+            android:onClick="remindMeClicked"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/remindMeDivider"
+            android:layout_width="260dp"
+            android:layout_height="0.75dp"
+            android:layout_below="@id/remindMe"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="74dp"
+            android:background="#2d2d2d" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/topDateDivider"
+        android:layout_width="280dp"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="5dp"
+        android:background="?android:attr/listDivider" />
+
+    <View
+        android:id="@+id/bottomDateDivider"
+        android:layout_width="280dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/topDateDivider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="5dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/startEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topDateDivider"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="12dp"
+        android:text="Start" />
+
+    <TextView
+        android:id="@+id/startCalendar"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topDateDivider"
+        android:layout_alignEnd="@id/startEvent"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="-113dp"
+        android:text="1/1/2020"
+        android:textSize="15sp"
+        android:onClick="startCalendarClicked"/>
+    <TextView
+        android:id="@+id/startTime"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topDateDivider"
+        android:layout_alignEnd="@id/startCalendar"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="-113dp"
+        android:text="1:00 PM"
+        android:textSize="15sp"
+        android:onClick="startTimeClicked"/>
+
+    <TextView
+        android:id="@+id/endEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topDateDivider"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="65dp"
+        android:text="End" />
+
+    <TextView
+        android:id="@+id/endCalendar"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startCalendar"
+        android:layout_alignEnd="@id/endEvent"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="-120dp"
+        android:text="1/1/2020"
+        android:textSize="15sp"
+        android:onClick="endCalendarClicked"/>
+    <TextView
+        android:id="@+id/endTime"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topDateDivider"
+        android:layout_alignEnd="@id/endCalendar"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="-113dp"
+        android:text="1:00 PM"
+        android:textSize="15sp"
+        android:onClick="endTimeClicked"/>
+
+
+</RelativeLayout>

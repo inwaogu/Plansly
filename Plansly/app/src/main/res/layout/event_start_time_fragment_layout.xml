@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackGroundColor">
+
+    <RelativeLayout
+        android:id="@+id/centerTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="50dp">
+        <NumberPicker
+            android:id="@+id/hourPicker"
+            android:theme="@style/AppTheme.Picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/activityBackGroundColor"
+            android:descendantFocusability="blocksDescendants"
+            />
+        <NumberPicker
+            android:id="@+id/minutePicker"
+            android:theme="@style/AppTheme.Picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/activityBackGroundColor"
+            android:layout_toEndOf="@id/hourPicker"
+            android:layout_marginStart="30dp"
+            android:descendantFocusability="blocksDescendants"
+            />
+        <NumberPicker
+            android:id="@+id/timeZonePicker"
+            android:theme="@style/AppTheme.Picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/activityBackGroundColor"
+            android:layout_toEndOf="@id/minutePicker"
+            android:layout_marginStart="30dp"
+            android:descendantFocusability="blocksDescendants"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/saveTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/centerTimePicker"
+        android:text="Save"
+        android:textAllCaps="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="70dp"
+        android:textColor="@color/plannerTextColor"
+        android:onClick="saveTimeClicked"/>
+    <TextView
+        android:id="@+id/cancelTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/centerTimePicker"
+        android:layout_toEndOf="@id/saveTime"
+        android:text="Cancel"
+        android:textAllCaps="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/plannerTextColor"
+        android:onClick="cancelClicked"/>
+
+</RelativeLayout>

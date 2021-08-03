@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.CalendarView
+    android:id="@+id/calendar_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/activityBackGroundColor">
+
+   <RelativeLayout
+       android:id="@+id/calendar_relative_layout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="335dp"
+       android:background="@color/activityBackGroundColor"
+       >
+        <!--Todo:Make button corners rounded-->
+       <Button
+           android:id="@+id/savebutton"
+           android:layout_width="wrap_content"
+           android:layout_height="30dp"
+           android:layout_alignParentTop="true"
+           android:layout_marginStart="20dp"
+           android:layout_marginRight="296dp"
+           android:layout_marginBottom="20dp"
+           android:background="@color/toolBarColor"
+           android:text="ok"
+           android:textAlignment="center"
+           android:onClick="saveClicked"/>
+   </RelativeLayout>
+
+</android.widget.CalendarView>

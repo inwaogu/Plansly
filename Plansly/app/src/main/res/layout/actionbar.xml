@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:layout_above="@android:id/widget_frame">
+    <!--Todo:add character spacing to title-->
+    <TextView
+        android:id="@+id/myTitle"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/plansly"
+        android:textColor="@color/toolBarTextColor"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="80dp"
+        app:srcCompat="@drawable/ic_event" />
+
+
+</RelativeLayout>

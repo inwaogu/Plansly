@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackGroundColor">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Remind me..."
+        android:fontFamily="@font/opensans"/>
+    <RelativeLayout
+        android:id="@+id/centerRemindTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginEnd="10dp">
+
+        <EditText
+            android:id="@+id/remindTimeEditText"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="20dp"
+            android:inputType="number"/>
+
+        <NumberPicker
+            android:id="@+id/unit_of_time_Picker"
+            android:theme="@style/AppTheme.Picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/activityBackGroundColor"
+            android:layout_toEndOf="@id/remindTimeEditText"
+            android:layout_marginStart="70dp"
+            android:descendantFocusability="blocksDescendants" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/saveTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/centerRemindTimePicker"
+        android:text="Save"
+        android:textAllCaps="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="60dp"
+        android:textColor="@color/plannerTextColor"
+        android:onClick="remindSaveTimeClicked"
+        android:background="@color/activityBackGroundColor"/>
+    <TextView
+        android:id="@+id/cancelTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/centerRemindTimePicker"
+        android:layout_toEndOf="@id/saveTime"
+        android:text="Cancel"
+        android:textAllCaps="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/plannerTextColor"
+        android:onClick="remindCancelClicked"
+        android:background="@color/activityBackGroundColor"/>
+
+</RelativeLayout>

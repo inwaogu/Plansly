@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:background="@color/activityBackGroundColor">
+    <!--Todo:set Font-->
+    <TextView
+        android:id="@+id/never"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Never"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:onClick="neverClicked"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"/>
+    <!--Todo:set Font-->
+    <TextView
+        android:id="@+id/setRepeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set repeat Time"
+        android:layout_below="@+id/never"
+        android:textSize="20sp"
+        android:focusable="true"
+        android:clickable="true"
+        android:onClick="setRepeatClicked"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-25dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="18dp"
+        android:layout_centerHorizontal="true"
+        android:background="?android:attr/listDivider" />
+
+</RelativeLayout>

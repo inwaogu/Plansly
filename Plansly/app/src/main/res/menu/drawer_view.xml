@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="none" android:id="@+id/reward_group">
+        <item
+            android:id="@+id/rewards"
+            android:title="My Rewards"
+            android:icon="@drawable/reward_icon"
+            />
+    </group>
+    <group android:checkableBehavior="none" android:id="@+id/settings_group">
+        <item
+            android:id="@+id/settings"
+            android:title="Settings"
+            android:icon="@drawable/settings_icon"
+            />
+    </group>
+    <group android:checkableBehavior="none" android:id="@+id/donate_group">
+        <item
+            android:id="@+id/donate"
+            android:title="Donate"
+            android:icon="@drawable/donate_icon"
+            />
+    </group>
+    <group android:checkableBehavior="none" android:id="@+id/ad_group">
+        <item
+            android:id="@+id/remove_ads"
+            android:title="Remove Ads"
+            android:icon="@drawable/ads_icon"
+            />
+    </group>
+</menu>
